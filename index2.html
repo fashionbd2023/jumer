@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JUMER FASHION LTD.</title>
+    <link rel="stylesheet" href="style2.css">
+	<style>
+      .clock {
+        font-size: 80px;
+        text-align: center;
+        margin-top: 50px;
+      }
+      .meridiem {
+        font-size: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+	<img src="Jumer logo.png" alt="Jumer logo">
+      <h1>JUMER FASHION LTD.</h1>
+	  <p> … Space for a desire fashion </p>
+    </header>
+	<main>
+	<script>
+      function updateClock() {
+        const now = new Date();
+        let hours = now.getHours();
+        let meridiem = 'AM';
+        if (hours > 12) {
+          hours -= 12;
+          meridiem = 'PM';
+        } else if (hours === 0) {
+          hours = 12;
+        }
+        const minutes = now.getMinutes().toString().padStart(2, '0');
+        const seconds = now.getSeconds().toString().padStart(2, '0');
+        const hoursElement = document.querySelector('.hours');
+        const minutesElement = document.querySelector('.minutes');
+        const secondsElement = document.querySelector('.seconds');
+        const meridiemElement = document.querySelector('.meridiem');
+        hoursElement.textContent = hours.toString().padStart(2, '0');
+        minutesElement.textContent = minutes;
+        secondsElement.textContent = seconds;
+        meridiemElement.textContent = meridiem;
+      }
+
+      updateClock();
+      setInterval(updateClock, 1000);
+    </script>
+    
+		 <div class="clock">
+		  <span class="hours">00</span>:
+		  <span class="minutes">00</span>:
+		  <span class="seconds">00</span>
+		  <span class="meridiem">AM</span>
+		</div>
+    </main>
+    <footer>
+      <p>Factory Address: Alokdia, Kalampur, Dhamrai, Dhaka-1351, Bangladesh.
+<p>Head Office:  House # 462 (1ST Floor), Road # 8, DOHS, Baridhara, Dhaka-1206, Bangladesh.</p>
+Website: www.jumerfashionltd.com 
+</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: andaluas;
+  font-size: 20px;
+  line-height: 1;
+}
+
+header {
+  background-color: #ccc;
+  color: #17202A;
+  text-align: right;
+  padding: 10px;
+ }
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 42vh;
+  font-family: arial;
+}
+
+.clock-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clock {
+  background-color: #00FF00;
+  color: #0000FF;
+  font-size: 100px;
+  padding: 50px;
+  border-radius: 100px;
+}
+
+
+footer {
+  background-color: #ccc;
+  padding: 10px;
+  text-align: center;
+  line-height: .5;
+}
